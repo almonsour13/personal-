@@ -1,0 +1,283 @@
+@media screen and (max-width:1000px){
+    /* servies */
+    #Services{
+        height: auto;
+    }
+    #Service .service-content{
+        grid-template-columns: repeat(2,auto);
+    }
+     /* skills-------------------------- */
+     #Skills{
+        height: auto;
+     }
+     #Skills .skills-content{
+        grid-template-columns: repeat(2, auto);
+    }
+}
+@media screen and (max-width:900px){
+    #About{
+        height: auto;
+    }
+    .about-content{
+        padding: 40px 0px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .profile-picture{
+        height: auto;
+        width: auto;
+    }
+    .profile-picture img{
+        height: 250px;
+        width: 250px;
+    }
+    .profile-picture .border-img{
+        height: 250px;
+        width: 250px;
+        top: 20px;
+        right: 20px;
+    }
+    .about-me{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .about-me h1{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .about-me p{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .about-me a.contact{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    /* services------------------------------------ */
+    #Service{
+        padding: 50px 0px;
+    }
+    #Skills{
+        padding: 50px 0px;
+    }
+    /* education */
+    .education-content{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .education-description h1{
+        text-align: center;
+    }
+    
+    .education-description{
+        text-align: center;
+        width:100%;
+    }
+}
+@media screen and (max-width:700px){
+    .profile-picture img{
+        height: 200px;
+        width: 200px;
+    }
+    .profile-picture .border-img{
+        height: 200px;
+        width: 200px;
+        top: 20px;
+        right: 20px;
+    }
+    #About{
+        padding: 40px 20px;
+    }
+    #Service{
+        height: auto;
+        width: 100%;
+        padding: 20px 20px;
+    }
+    #Service .service-content{
+        grid-template-columns: auto;
+        gap: 10px;
+    }
+    .service-content .services-head{
+        height: auto;
+        width: 400px;
+        padding: 20px 0px;
+    }
+    .service-content .services{
+        height: 170px;
+        width: 400px;
+        transform: translateX(150%);
+        opacity: 0;
+        transition: 1s ease;
+    }
+    .service-content .services.disabled-hover:hover{
+        
+    }
+    .service-content .services:nth-of-type(even){
+        transform: translateX(-150%);
+    }
+    .service-content .services.show{
+        transform: translateX(0);
+        opacity: 1;
+    }
+     /* skills-------------------------- */
+     #Skills{
+        width: 100%;
+        padding: 150px 20px;
+    }
+     #Skills .skills-content{
+        grid-template-columns:auto;
+    }
+    #Skills .skills-header{
+        height: 150px;
+        width: 400px;
+    }
+    #Skills .skills-header h1{
+        font-size: 3rem;
+    }
+    #Skills .skills-content .card{
+        height: 170px;
+        width: 400px;
+        transform: translateX(150%);
+        opacity: 0;
+        transition: 1s ease;
+    }
+    #Skills .skills-content .card:nth-of-type(even){
+        transform: translateX(-150%);
+    }
+    #Skills .skills-content .card.show{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    #Skills .skills-content .card .circle{
+        height: 150px;
+        width: 150px;
+    }
+    #Skills .skills-content .card .circle::before{
+        height: 130px;
+        width: 130px;
+    }
+    .skills-content .card .percent{
+        font-size: 1.8rem;
+    }
+    .skills-content .card .languges{
+        font-size: 1.3rem;
+    }
+    /* .education-conten */
+    .school-picture a{
+        height: 200px;
+        width: 200px;
+    }
+    .school-picture a img{
+        height: 200px;
+        width: 200px;
+    }
+    .school-picture .border{
+        height: 200px;
+        width: 200px;
+    }
+    .education-description p{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:500px){
+    nav .menu-button,nav .up-button{
+        height: 45px;
+        width: 45px;
+    }
+    .banner-content h2{
+        font-size: 2rem;
+    }
+    .banner-content p{
+        font-size: 0.8rem;
+    }
+    .banner-content .social-media a{
+        height: 32px;
+        width: 32px;
+    }
+    /* .banner-content .social-media a i{
+        font-size: 12px;
+    } */
+    .service-content .services-head{
+        height: auto;
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .service-content .services{
+        height: 170px;
+        width: 100%;
+    }
+    /* skills------------ */
+    #Skills .skills-header{
+        height: 150px;
+        width: 100%;
+    }
+    #Skills .skills-content .card{
+        height: 150px;
+        width: 100%;
+    }
+    #Skills .skills-content .card .circle{
+        height: 130px;
+        width: 130px;
+    }
+    #Skills .skills-content .card .circle::before{
+        height: 110px;
+        width: 110px;
+    }
+    .skills-content .card .percent{
+        font-size: 1.8rem;
+    }
+    .skills-content .card .languges{
+        font-size: 1rem;
+    }
+    /* .education-content */
+    .education-description{
+        width:100%;
+    }
+    /*  */
+    #Visit .profile{
+        width: 180px;
+        height: 180px;
+    }
+    #Visit .description h1{
+        font-size: 1.5rem;
+    }
+    #Visit .description p{
+        font-size: 0.8rem;
+    }
+     /* cpntacts */
+     #Contacts .contacts-container{
+        gap: 10px;
+    }
+    #Contacts .contacts-container a{
+        height: 30px;
+        width: 30px;
+    }
+    #Contacts .menu-links{
+        gap: 10px;
+    }
+    #Contacts .menu-links a{
+        font-size: 0.7rem;
+    }
+    .copy-rights-container h1{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width:400px){
+    #Skills .skills-content .card .circle{
+        height: 110px;
+        width: 110px;
+    }
+    #Skills .skills-content .card .circle::before{
+        height: 90px;
+        width: 90px;
+    }
+    .skills-content .card .percent{
+        font-size: 1.5rem;
+    }
+    .skills-content .card .languges{
+        font-size: 1rem;
+    }
+}

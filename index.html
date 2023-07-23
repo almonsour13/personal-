@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" href="assets/img/imgae1.jpg" type="type/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/5a00f43773.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</head>
+<body>
+    <nav>
+       
+        <button class="menu-button" onclick="menuButton(this)">
+            <i class="fa fa-bars"></i>
+            <span>&#10006;</span>
+        </button>
+        <div class="menu-list">
+            <a href="#Banner" class="active" onclick="selectPage(this)">Home</a>
+            <a href="#About" onclick="selectPage(this)">About</a>
+            <a href="#Service" onclick="selectPage(this)">Services</a>
+            <a href="#Projects" onclick="selectPage(this)">Projects</a>
+            <a href="#Skills" onclick="selectPage(this)">Skills</a>
+            <a href="#Education" onclick="selectPage(this)">Education</a>
+            <a href="#Contacts" onclick="selectPage(this)">Contacts</a>
+        </div>
+        <button class="up-button" onclick="scrollUp()">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <h1 class="text-label"></h1>
+        <h1 class="view-service-details">Click to see details</h1>
+    </nav>
+    <header id="Banner" class="elements" title="Home">
+        <div class="banner-content">
+            <h2>Hi,<span> I'm Al Monsour M. Salida</span></h2>
+            <p>
+                a passionate, dedicated IT student and 
+                have a strong interest in web development and andriod development.
+            </p>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" onclick="moreContacts()"><i class="fa-solid fa-ellipsis"></i></a>
+            </div>
+           
+        </div> 
+        <div class="cursor-effect-outer">
+        </div>
+        <div class="cursor-effect-inner"></div>
+    </header>
+    <section id="About" class="elements" title="About">
+        <div class="about-content">
+            <div class="profile-picture">
+                <img src="assets/img/imgae1.jpg" alt="">
+                <div class="border-img"></div>
+            </div>
+            <div class="about-me">
+                <h1>About me</h1>
+                <p>
+                    I am a detail-oriented and motivated IT student pursuing a Bachelor's degree 
+                    in Information Technology. Throughout my academic journey, I have gained valuable 
+                    knowledge and practical experience in various programming languages, software development 
+                    methodologies, and web technologies. I enjoy solving complex problems and creating innovative 
+                    solutions that can make a positive impact on people's lives.
+                </p>
+                <a href="#" class="contact">Contact me</a>
+            </div>
+        </div>
+    </section>
+    <section id="Service" class="elements" title="Services">
+        <div class="service-content">
+            <div class="services-head">
+                <h1 class="head">Services</h1>
+                <p>
+                    As an IT student, 
+                    I offer a range of services to cater to diverse client needs. 
+                    With a focus on delivering high-quality solutions, my services include:
+                </p>
+        
+            </div>
+            <div class="services">
+                <span class="material-icons">&#xe069;</span> 
+                <p class="service-title">Web Development</p>
+                <div class="hovered-description">
+                    I specialize in web development, creating dynamic and interactive online solutions that cater to your specific needs. Using the latest technologies and best practices, I build websites, ensuring smooth user experiences and seamless functionality across various devices.
+                </div>
+            </div>
+            <div class="services">
+                <span class="material-icons">&#xe1b1;</span> 
+                <p class="service-title">Andriod Development</p>
+                <div class="hovered-description">
+                    I offer Android development services to help you reach a vast mobile audience. I design and develop native Android applications that are user-friendly, efficient, and feature-rich. From concept to deployment on the Google Play Store, I ensure that your app stands out and delivers a seamless experience to Android users.
+                </div>
+            </div>
+            <div class="services">
+                <span class="material-icons">&#xf114;</span> 
+                <p class="service-title">Web Design</p>
+                <div class="hovered-description">
+                    I specialize in crafting visually stunning and user-friendly websites that leave a lasting impression on your audience. From conceptualization to implementation, I combine creativity with functionality to build responsive and engaging websites that align with your brand identity and business objectives.
+                </div>
+            </div>
+            <div class="services">
+                <span class="material-icons">&#xf8d3;</span> 
+                <p class="service-title">UI Design</p>
+                <div class="hovered-description">
+                    My UI design service revolves around creating intuitive and visually appealing user interfaces that enhance the overall user experience. I carefully consider user behavior and preferences to craft interfaces that are easy to navigate, ensuring a seamless and enjoyable interaction between your users and your digital products.
+                </div>
+            </div>
+            <div class="services">
+                <span class="material-icons">&#xe43a;</span> 
+                <p class="service-title">Video Editing</p>
+                <div class="hovered-description">
+                    With my photo and video editing service, I bring life to your visuals. Whether it's retouching images to perfection or editing videos to create captivating stories, I utilize cutting-edge software and creative expertise to deliver high-quality and impactful visual content that stands out from the crowd.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Skills" class="elements" title="Skills">
+        <div class="skills-content">
+            <div class="skills-header">
+                <h1>Skills</h1>
+                <p>I have acquired a diverse set of skills that enable me to create meaningful and functional solutions for my clients. 
+                    Some of my key abilities include:</p>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <div class="percent" value="80">
+                        80%
+                    </div>
+                </div>
+                <div class="languges" >Html</div>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <div class="percent" value="60">
+                        60%
+                    </div>
+                </div>
+                <div class="languges">Css</div>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <div class="percent" value="55">
+                        55%
+                    </div>
+                </div>
+                <div class="languges">Javascript</div>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <div class="percent" value="60">
+                        60%
+                    </div>
+                </div>
+                <div class="languges">Java</div>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <div class="percent" value="30">
+                        30%
+                    </div>
+                </div>
+                <div class="languges">Php</div>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <div class="percent" value="40">
+                        40%
+                    </div>
+                </div>
+                <div class="languges">MySQL</div>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <div class="percent" value="30">
+                        30%
+                    </div>
+                </div>
+                <div class="languges">Version Control</div>
+            </div>
+            <div class="card">
+                <div class="circle">
+                    <div class="percent" value="50">
+                        50%
+                    </div>
+                </div>
+                <div class="languges">Responsive Design</div>
+            </div>
+        </div>
+    </section>
+    <section id="Projects" class="elements" title="Projects">
+        <div class="header">
+            <h1>Projects</h1>
+        </div>
+        <p>Projects willl display sooon</p>
+    </section>
+    <section id="Education" class="elements" title="Education">
+        <div class="education-content">
+            <div class="school-picture">
+                <a href="https://dorsu.edu.ph" target="_blank">
+                    <img src="assets/img/dorsu.png" alt="">
+                    <div class="hovered-details">
+                        Click to visit website
+                    </div>
+                </a>
+                <div class="border"></div>
+            </div>
+            <div class="education-description">
+                <h1>Education</h1>
+                <p>I am currently pursuing my Information Technology (IT) course at Davao Oriental State University, 
+                    an esteemed institution known for its academic excellence. Throughout my studies, 
+                    I have been immersed in various aspects of IT, gaining a knowledge in programming, 
+                    database management and etc. The university's supportive environment and diverse learning opportunities have been 
+                    invaluable in fueling my passion for technology and preparing me for a successful career in the IT industry. 
+                    I look forward to continuing my educational journey and furthering my skills in the dynamic world of Information Technology.</p>
+            </div>
+        </div>
+    </section>
+    <section id="Visit" class="elements">
+            <div class="profile">
+                <div class="picture">
+
+                </div>
+            </div>
+            <div class="description">
+                <h1>Thank you for visiting my personal portfolio. </h1>
+                <p>I hope you found the information here informative and engaging. 
+                    If you have any questions or would like to discuss potential collaborations, please feel free to reach out to me</p>
+            </div>
+    </section>
+    <section id="Contacts" class="elements" title="Contacts">
+        <div class="mid">
+            <div class="contacts-container">
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-figma"></i></a>
+            </div>
+            <div class="menu-links">
+                <a href="#" onclick="scrollMenu(this)">Home</a>
+                <a href="#" onclick="scrollMenu(this)">About</a>
+                <a href="#" onclick="scrollMenu(this)">Services</a>
+                <a href="#" onclick="scrollMenu(this)">Skills</a>
+                <a href="#" onclick="scrollMenu(this)">Projects</a>
+                <a href="#" onclick="scrollMenu(this)">Education</a>
+            </div>
+        </div>
+        <div class="copy-rights-container">
+            <h1>@Copyrights 2023. All rights reserved</h1>
+        </div>
+    </section>
+</body>
+</html>

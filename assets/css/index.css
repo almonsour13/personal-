@@ -1,0 +1,775 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(18, 18, 18);
+    overflow-x: hidden;
+}
+nav{
+    position: relative;
+    height:auto;
+    width: 100%;
+}
+nav .menu-button{
+    position: fixed;
+    width:100%;
+    right: 0;
+    margin: 20px;
+    z-index: 9999;
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px #266d65 solid;
+    transition: 0.3s;
+    background-color: transparent;
+    cursor: pointer;
+}
+nav .menu-button:hover{
+    color: #48C5B6;
+    border: 1px #48C5B6 solid;
+}
+nav .menu-button i{
+    transform: scale(1.2);
+    color: #266d65;
+}
+nav .menu-button span{
+    display: none;
+}
+nav .menu-button:hover i{
+    color: #48C5B6;
+}
+nav .menu-button.active{
+    color: #48C5B6;
+    border: 1px #48C5B6 solid;
+}
+nav .menu-button.active i{
+    color: #48C5B6;
+}
+nav .menu-button.active span{
+    display: none;
+    transform: scale(1.2);
+    color: #48C5B6;
+}
+nav .text-label{
+    font-size: 1rem;
+    color: rgb(87, 87, 87);
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 20px;
+    z-index: 99;
+    letter-spacing: 0.8px;
+}
+nav .view-service-details{
+    font-size: 1rem;
+    color: rgb(87, 87, 87);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 20px;
+    z-index: 99;
+    letter-spacing: 0.8px;
+}
+nav .up-button{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    z-index: 99;
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px #266d65 solid;
+    transition: 0.3s;
+    background-color: transparent;
+    cursor: pointer;
+    color: #266d65;
+}
+nav .up-button i{
+    color: #266d65;
+}
+nav .up-button:hover{
+    border: 1px #48C5B6 solid;
+}
+nav .up-button:hover i{
+    color: #48C5B6;
+}
+nav .menu-list{
+    position: fixed;   
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    left: 100%;
+    padding: 90px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(18, 18, 18);
+    opacity: 0;
+    transform-origin: 0.5s;
+}
+nav .menu-list a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #48C5B6;
+    font-size: 16px;
+    transition: 0.3s;
+}
+nav .menu-list a.active{
+    background-color: #266d6575;
+    color: white;
+}
+nav .menu-list a:hover{
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px 1px  #48C5B6;
+}
+
+
+/* banner-------------------------------------------------------- */
+header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(18, 18, 18, 0.9),rgba(18, 18, 18, 0.9)),url(../img/imgae1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.banner-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.banner-content h2{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+.banner-content h2 span{
+    color: #48C5B6;
+}
+.banner-content p{
+    color: rgb(194, 192, 192);
+    font-size: 1rem;
+    text-align: center;
+}
+.banner-content .social-media{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.banner-content .social-media a{
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px #266d65 solid;
+    border-radius: 50%;
+    color: white;
+    transition: 0.2s;
+}
+.banner-content .social-media a:hover{
+    border: 1.5px #48C5B6 solid;
+    box-shadow: 0px 0px 6px 1px  #48C5B6;
+    background-color: #48C5B6;
+    transform: scale(1.1) rotate(360deg);
+}
+.banner-content .social-media a i{
+    transform: scale(1.1);
+    color: #266d65;
+}
+.banner-content .social-media a:hover i{
+    color: white;
+}
+/* cursor effect-------------------------------------------- */
+.cursor-effect-outer{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 0.5px #48C5B6 solid;
+    /* box-shadow: 0px 0px 10px 1px  #48c5b7;  */
+    position: absolute;
+    pointer-events: none;
+    z-index: 9;
+    display: none;
+    opacity: 1;
+}
+.cursor-effect-inner{
+    border-radius: 50%;
+    height:5px;
+    width: 5px;
+    background-color: #48C5B6;
+    position: absolute;
+    pointer-events: none;
+    z-index: 9;
+    display: none;
+}
+.cursor-effect-outer.active,.cursor-effect-inner.active{
+    opacity: 0;
+}
+
+/* About---------------------------------------------------- */
+#About{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    overflow: hidden;
+}
+.about-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 30px;
+    opacity: 1;
+    transition: 1s ease;
+}
+.about-content.fade-in{
+    opacity: 1;
+}
+.profile-picture{
+    left: 20px;
+    height: 300px;
+    width: 400px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translateX(-50%);
+    transition: 1s ease-out;
+    opacity: 0;
+}
+#About.animate .profile-picture{
+    opacity: 1;
+    transform: translateX(0);
+}
+.profile-picture img{
+    height: 300px;
+    width: 300px;
+    box-shadow: 0px 0px 0px 8px rgb(18, 18, 18);
+}
+.profile-picture .border-img{
+    height: 300px;
+    width: 300px;
+    border: 5px  #48C5B6 solid;
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    z-index: -1;
+}
+.about-me{
+    height: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translateX(50%);
+    transition: 1s ease-out;
+    opacity: 0
+}
+#About.animate .about-me{
+    opacity: 1;
+    transform: translateX(0);
+}
+.about-me h1{
+    color: #48C5B6;
+    font-size: 3rem;
+}
+.about-me p{
+    color: rgb(194, 192, 192);
+    font-size: 0.9rem;
+    text-indent: 20px;
+}
+.about-me a.contact{
+    width: 140px;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px #266d65 solid;
+    box-shadow: 0px 0px 0px 0px #48C5B6;
+    color: rgb(194, 192, 192);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.about-me a.contact:hover{
+    border: 1px #48C5B6 solid;
+    box-shadow: 5px 5px 0px 1px #48C5B6;
+    color: #48C5B6;
+}
+
+/* Service----------------------------------------------------- */
+#Service{
+    height:100vh;
+    width: 100%;
+    padding: 150px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+#Service .service-content{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3,auto);
+    gap: 20px;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(50%);
+}
+#Service.animate .service-content{
+    transform: translateY(0);
+    opacity: 1;
+}   
+#Service .service-content.fade-in{
+    opacity: 1;
+}
+.service-content .services-head{
+    height: 150px;
+    width: 300px;
+    gap: 5px;
+    transition: 0.3s;
+}
+.service-content .services-head h1.head{
+    color: #48C5B6;
+    font-size: 4rem;
+    text-align: left;
+}
+.service-content .services-head p{
+    color: rgb(194, 192, 192);
+    font-size: 0.8rem;
+}
+.service-content .services{
+    position: relative;
+    height: 150px;
+    width: 300px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+.service-content .services span{
+    color: #48C5B6;
+    font-size: 2rem;
+}
+.service-content .services p.service-title{
+    color: #48C5B6;
+    font-size: 1.2rem;
+}
+.service-content .services .hovered-description{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color:rgb(27, 27, 27);
+    border-radius: 10px;
+    color: rgb(194, 192, 192);
+    font-size: 0.8rem;
+    text-indent: 10px;
+    padding: 5px;
+    transition: 0.5s ease;
+    text-align: center;
+    top: 100%;
+}
+.service-content .services:hover{
+    transform: scale(1.01);
+}
+/* .service-content .services:hover .hovered-description{
+    top: 0%;
+} */
+.service-content .services.active{
+    box-shadow: 0px 0px 5px 1px #48C5B6;
+}
+.service-content .services.active .hovered-description{
+    top: 0%;
+}
+/* skills----------------------------------------------- */
+#Skills{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 150px 0px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+}
+#Skills .skills-header{
+    height: 120px;
+    width: 300px;
+}
+#Skills .skills-header h1{
+    font-size: 2.5rem;
+    color: #48C5B6;
+}
+#Skills .skills-header p{
+    color: rgb(194, 192, 192);
+    font-size: 0.8rem;
+}
+#Skills .skills-content{
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    transform: translateY(50%);
+}
+
+#Skills.animate .skills-content{
+    opacity: 1;
+    transform: translateY(0);
+}
+.skills-content .card{
+    height: 120px;
+    width: 300px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+.skills-content .card .circle{
+    height: 100px;
+    width: 100px;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #48C5B6;
+    transition: 0.5s;
+}
+.skills-content .card .circle:before{
+    position: absolute;
+    content: "";
+    height: 90px;
+    width: 90px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 50%;
+}
+.skills-content .card .percent{
+    position: absolute;
+    font-size: 1.2rem;
+    color: #48C5B6;
+}
+.skills-content .card .languges{
+    color: #48C5B6;
+    font-size: 1rem;
+}
+/* Project------------------------------------------------------------ */
+#Projects{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+#Projects .header h1{
+    font-size: 4rem;
+    color: #48C5B6;
+    transform: scale(0);
+    transition: 1s ease;
+}
+#Projects.animate .header h1{
+    transform: scale(1);
+}
+#Projects p{
+    color: rgb(194, 192, 192);
+    font-size: 0.8rem;
+    transform: scale(0);
+    transition: 1s ease;
+}
+#Projects.animate p{
+    transform: scale(1);
+}
+/* education--------------------------------- */
+#Education{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+.education-content{
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.school-picture{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    transition: 1s ease-out;
+    opacity: 0;
+}
+#Education.animate .school-picture{
+    transform: translateX(0);
+    opacity: 1;
+}
+.school-picture a{
+    height: 230px;
+    width: 230px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.school-picture a img{
+    height: 230px;
+    width: 230px;
+}
+.school-picture a .hovered-details{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    background-color: rgba(18, 18, 18, 0.745);
+    color: #48C5B6;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.school-picture a:hover .hovered-details{
+    opacity: 1;
+}
+.school-picture .border{
+    border: 5px  #48C5B6 solid;
+    height: 230px;
+    width: 230px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: -10;
+}
+.education-description{
+    height: 250px;
+    width: 400px;
+    transform: translateX(50%);
+    transition: 1s ease-out;
+    opacity: 0;
+}
+#Education.animate .education-description{
+    transform: translateX(00%);
+    opacity: 1;
+}
+.education-description h1{
+    color: #48C5B6;
+    font-size: 2rem;
+}
+.education-description p{
+    margin-top: 10px;
+    color: rgb(194, 192, 192);
+    font-size: 0.8rem;
+    text-indent: 20px;
+}
+#Visit{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+}
+#Visit .profile{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    border: 5px #48C5B6 solid;
+}
+/* visit-------------------------------------------------------------------- */
+#Visit .profile{
+    opacity: 0;
+    transform: translateY(50%);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+#Visit.animate .profile{
+    opacity: 1;
+    transform: translateY(0);
+}
+#Visit .profile .picture{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/profile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60%;
+    border-radius: 50%;
+}
+#Visit .description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: 1s ease-in-out;
+}
+
+#Visit.animate .description{
+    opacity: 1;
+    transform: translateY(0);
+}
+#Visit .description h1{
+    color: #48C5B6;
+    text-align: center;
+    font-size: 2rem;
+}
+#Visit .description p{
+    color: rgb(194, 192, 192);
+    font-size: 0.9rem;
+    text-align: center;
+}
+/* contacts------------------------ */
+#Contacts{
+    width: 100%;
+    padding: 0px 20px;
+}
+.mid{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 0px;
+    border-top: 2px rgb(27, 27, 27) solid;
+}
+.contacts-container{
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.contacts-container a{
+    height: 35px;
+    width: 35px;
+    border: 1px #266d65 solid;
+    border-radius: 50%;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+.menu-links{
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.menu-links a{
+    color: rgb(87, 87, 87);
+    font-size: 0.8rem;
+    transition: 0.5s ease;
+}
+.menu-links a:hover{
+    color: rgb(194, 192, 192);
+}
+.contacts-container a:hover{
+    border: 1px #48C5B6 solid;
+    background-color: #48C5B6;
+    box-shadow: 0px 0px 6px 1px  #48C5B6;
+    transform: scale(1.1) rotate(360deg);
+}
+.contacts-container a i{
+    color: #266d65;
+}
+.contacts-container a:hover i{
+    color: white;
+}
+#Contacts .copy-rights-container{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px rgb(27, 27, 27) solid;
+}
+.copy-rights-container h1{
+    color: rgb(87, 87, 87);
+    font-size: 0.8rem;
+}
+
+/* scroll bar---------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width as needed */
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: #266d65; /* Adjust the thumb color */
+    border-radius: 5px; /* Adjust the border radius */
+  }
+::-webkit-scrollbar-thumb:hover{
+    background-color: #48C5B6;
+  }
+  
+::-webkit-scrollbar-track {
+    background-color: rgb(18, 18, 18);
+  }
