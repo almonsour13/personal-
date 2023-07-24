@@ -76,6 +76,7 @@ nav .view-service-details{
     margin: 20px;
     z-index: 99;
     letter-spacing: 0.8px;
+    display: none;
 }
 nav .up-button{
     position: fixed;
