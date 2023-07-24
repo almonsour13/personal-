@@ -81,6 +81,7 @@ $(document).ready(function() {
     checkBoxes()
     onScroll()
   })
+  onscroll()
   displaycirclePercent()
 });
 
