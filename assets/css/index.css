@@ -189,17 +189,16 @@ header{
     color: white;
     transition: 0.2s;
 }
-.banner-content .social-media a:hover{
+.banner-content .social-media a.active{
     border: 1.5px #48C5B6 solid;
     box-shadow: 0px 0px 6px 1px  #48C5B6;
     background-color: #48C5B6;
     transform: scale(1.1) rotate(360deg);
 }
 .banner-content .social-media a i{
-    transform: scale(1.1);
     color: #266d65;
 }
-.banner-content .social-media a:hover i{
+.banner-content .social-media a.active i{
     color: white;
 }
 /* cursor effect-------------------------------------------- */
@@ -733,7 +732,7 @@ header{
 .menu-links a:hover{
     color: rgb(194, 192, 192);
 }
-.contacts-container a:hover{
+.contacts-container a.active{
     border: 1px #48C5B6 solid;
     background-color: #48C5B6;
     box-shadow: 0px 0px 6px 1px  #48C5B6;
@@ -742,7 +741,7 @@ header{
 .contacts-container a i{
     color: #266d65;
 }
-.contacts-container a:hover i{
+.contacts-container a.active i{
     color: white;
 }
 #Contacts .copy-rights-container{

@@ -49,7 +49,18 @@ $(document).ready(function() {
         $(".cursor-effect-outer").removeClass("active");
         $(".cursor-effect-inner").removeClass("active");
     });
-      
+    $('.social-media a,.contacts-container a').on("mouseenter", 
+      function(){
+        if(!isMobileDevice()){
+          $(this).addClass("active")
+        }
+      }
+    )
+    $('.social-media a,.contacts-container a').on("mouseleave", 
+      function(){
+        $(this).removeClass("active")
+      }
+    )
     $("div.card").on("mouseenter", function() {
         var percentage = $(this).children(".circle").children(".percent").attr("value");
         var progressValue = 0;
@@ -81,8 +92,8 @@ $(document).ready(function() {
     checkBoxes()
     onScroll()
   })
-  onscroll()
   displaycirclePercent()
+  onScroll()
 });
 
 //nav functions ------------------------
