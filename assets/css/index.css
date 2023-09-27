@@ -145,9 +145,10 @@ nav .menu-list a:hover{
 header{
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(18, 18, 18, 0.9),rgba(18, 18, 18, 0.9)),url(../img/imgae1.jpg);
+    background-image: linear-gradient(rgba(18, 18, 18, 0.9),rgba(18, 18, 18, 0.9)),url(../img/profile4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -650,7 +651,7 @@ header{
 #Visit .profile .picture{
     height: 100%;
     width: 100%;
-    background-image: url(../img/profile.jpg);
+    background-image: url(../img/profile4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 60%;
