@@ -6,8 +6,52 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: rgb(18, 18, 18);
+    /*background-color: rgb(18, 18, 18);*/
     overflow-x: hidden;
+    background-color: #efefef;
+}
+body.dark-mode{
+  background-color: rgb(18, 18, 18)
+}
+.mode-container{
+  position: fixed;
+  z-index: 998;
+  right:4px;
+  top: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: auto;
+  transform: rotate(90deg);
+}
+.mode-container i{
+  font-size: 1rem;
+  color: #266d65;
+}
+.dark-mode-button{
+  width: 40px;
+  height: 20px;
+  border-radius: 30px;
+  padding: 2px;
+  border: 1px #266d65 solid;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.mode-circle{
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 1px #266d65 solid;
+  transition: 0.5s;
+}
+body.dark-mode .dark-mode-button{
+  justify-content:right;
+}
+body.dark-mode .dark-mode-button .mode-circle{
+  background-color: #266d65;
 }
 nav{
     position: relative;
@@ -271,7 +315,6 @@ header{
 .profile-picture img{
     height: 300px;
     width: 300px;
-    box-shadow: 0px 0px 0px 8px rgb(18, 18, 18);
 }
 .profile-picture .border-img{
     height: 300px;
@@ -370,7 +413,7 @@ header{
     position: relative;
     height: 150px;
     width: 300px;
-    background-color: rgb(27, 27, 27);
+    background-color: white;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -381,6 +424,9 @@ header{
     transition: 0.3s;
     cursor: pointer;
     overflow: hidden;
+}
+body.dark-mode .services{
+    background-color: rgb(27, 27, 27);
 }
 .service-content .services span{
     color: #48C5B6;
@@ -461,7 +507,7 @@ header{
 .skills-content .card{
     height: 120px;
     width: 300px;
-    background-color: rgb(27, 27, 27);
+    background-color: white;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -469,6 +515,9 @@ header{
     position: relative;
     padding: 10px;
     cursor: pointer;
+}
+body.dark-mode .card{
+    background-color: rgb(27, 27, 27);
 }
 .skills-content .card .circle{
     height: 100px;
@@ -486,8 +535,11 @@ header{
     content: "";
     height: 90px;
     width: 90px;
-    background-color: rgb(27, 27, 27);
+    background-color: white;
     border-radius: 50%;
+}
+body.dark-mode  .card .circle:before{
+  background-color: rgb(27, 27, 27);
 }
 .skills-content .card .percent{
     position: absolute;
