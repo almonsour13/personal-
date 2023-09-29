@@ -9,6 +9,7 @@ body{
     /*background-color: rgb(18, 18, 18);*/
     overflow-x: hidden;
     background-color: #efefef;
+    transition-behavior: 0.5s;
 }
 body.dark-mode{
   background-color: rgb(18, 18, 18)
@@ -160,9 +161,12 @@ nav .menu-list{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(18, 18, 18);
+    background-color: white;
     opacity: 0;
     transform-origin: 0.5s;
+}
+body.dark-mode .menu-list{
+  background-color: rgb(18, 18, 18);
 }
 nav .menu-list a{
     width: 100%;
@@ -182,6 +186,9 @@ nav .menu-list a:hover{
     color: white;
     font-size: 20px;
     box-shadow: 0px 0px 10px 1px  #48C5B6;
+}
+body.dark-mode .menu-list a:hover{
+  background-color: rgb(18, 18, 18);
 }
 
 
@@ -747,7 +754,7 @@ body.dark-mode  .card .circle:before{
     flex-direction: column;
     gap: 10px;
     padding: 40px 0px;
-    border-top: 2px rgb(27, 27, 27) solid;
+    border-top: 2px #266d65 solid;
 }
 .contacts-container{
     width: 100%;
@@ -803,7 +810,7 @@ body.dark-mode  .card .circle:before{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px rgb(27, 27, 27) solid;
+    border-top: 2px #266d65 solid;
 }
 .copy-rights-container h1{
     color: rgb(87, 87, 87);
