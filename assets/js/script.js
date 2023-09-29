@@ -277,3 +277,10 @@ function transActiveMuenu(text){
     }
   });
 }
+function darkClick(element){
+  if($('body').hasClass('dark-mode')){
+    $('body').removeClass('dark-mode')
+  }else{
+    $('body').addClass('dark-mode')
+  }
+}
