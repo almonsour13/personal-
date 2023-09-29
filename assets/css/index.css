@@ -449,7 +449,7 @@ body.dark-mode .services{
     position: absolute;
     display: flex;
     align-items: center;
-    background-color:rgb(27, 27, 27);
+    background-color:white;
     border-radius: 10px;
     color: rgb(194, 192, 192);
     font-size: 0.8rem;
@@ -458,6 +458,9 @@ body.dark-mode .services{
     transition: 0.5s ease;
     text-align: center;
     top: 100%;
+}
+body.dark-mode .hovered-description{
+  background-color:rgb(27, 27, 27)
 }
 .service-content .services:hover{
     transform: scale(1.01);
