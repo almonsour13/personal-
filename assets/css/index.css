@@ -459,7 +459,7 @@ body.dark-mode .services{
     text-align: center;
     top: 100%;
 }
-body.dark-mode .hovered-description{
+body.dark-mode .services .hovered-description{
   background-color:rgb(27, 27, 27)
 }
 .service-content .services:hover{
